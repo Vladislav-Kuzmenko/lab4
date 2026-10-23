@@ -7,7 +7,7 @@
     <!-- Підключення Bootstrap 5 через CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
+<body class="bg-light d-flex flex-column min-vh-100">
 <!-- Навігаційна панель (Navbar) -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
     <div class="container">
@@ -22,7 +22,7 @@
 </nav>
 
 <!-- Основний контент -->
-<div class="container bg-white p-4 rounded shadow-sm">
+<div class="container bg-white p-4 rounded shadow-sm mb-4">
     <!-- Flash-повідомлення -->
     @if(session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -32,6 +32,13 @@
 
     @yield('content')
 </div>
+
+<!-- Підвал (Footer) -->
+<footer class="mt-auto py-3 bg-dark text-white text-center">
+    <div class="container">
+        <p class="mb-0">Виконав: студент групи РС-42 Кузьменко Владислав</p>
+    </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
